@@ -15,6 +15,9 @@ A great blog app created with RoR.
 - Run `rails server`
 - Open Browser `http://localhost:3000/`
 
+## Testing
+- Run `rspec spec/`
+
 ## Author
 
 👤 *Raul A Ospina* 🧑🏻‍💻
