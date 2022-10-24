@@ -1,0 +1,11 @@
+<h1>Users#index</h1>
+<h1>This is root/home</h1>
+<h1>This is a list of all users</h1>
+<p>Find me in app/views/users/index.html.erb</p>
+
+<% @users.each do |user| %>
+  <%= link_to user_path(user) do %>
+    <h2><%= user.name %></h2>
+  <% end %>
+    <span><%= user.posts_counter %></span>
+<% end %>
