@@ -1,3 +1,11 @@
-<h1>Posts#show</h1>
-<h1>This is a single post</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<div class="container">
+<%= render @post %>
+  
+  <div class= "post-comments">
+      <%@comments.each do |comment|%>
+          <p><strong><%= comment.author.name %>: </strong><%=comment.text%></p>
+      <%end%>
+  </div>
+
+  <button class="all-post-btn"><%= link_to "Back to posts", user_posts_path %></button>
+</div>

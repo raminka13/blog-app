@@ -1,0 +1,10 @@
+<div class="post-card">
+  <%= link_to user_post_path(post.author_id, post.id), class: 'post-title' do %>
+    <h4><%=post.title%></h4>
+  <%end%>
+  <p class="post-text"><%= post.text.split("\n").first %></p>
+  <div class="social-post">
+    <span>📝 Comments: <%=post.comments_counter%></span>
+    <span>❤️ Likes: <%=post.likes_counter%></span>
+  </div>
+</div>

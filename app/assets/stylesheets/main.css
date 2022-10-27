@@ -1,0 +1,49 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: var(--fourth-color);
+}
+
+:root {
+  --main-color: #d9d6d2;
+  --second-color: #bf8e63;
+  --third-color: #8c593b;
+  --fourth-color: #593a28;
+  --fifth-color: #bf8a6b;
+}
+
+body {
+  background: linear-gradient(var(--main-color), var(--third-color));
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 900px;
+  flex-wrap: wrap;
+}
+
+.users-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.users-list li:nth-child(odd) {
+  background: linear-gradient(90deg, var(--fifth-color), var(--second-color));
+}
