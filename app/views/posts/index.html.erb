@@ -1,8 +1,18 @@
-<%= render @user %>
-<p> <%= render @posts %> </p>
+<div class="container">
+  <%= render @user %>
 
-<button class="btn btn-link">
-  <%= link_to user_path(@user) do %>
-  Back to <%= @user.name %> profile
-  <% end %>
-</button>
+  <%@posts.each do |post|%>
+    <%= render post %>
+    <div class='post-comments'>
+      <%post.recent_comments.each do |comment|%>
+        <p><strong><%=comment.author.name%>: </strong><%=comment.text%></p>
+      <%end%>
+    </div>
+  <%end%>
+
+  <button class="all-post-btn">
+    <%= link_to user_path(@user) do %>
+    Back to <strong><%= @user.name %></strong> profile
+    <% end %>
+  </button>
+</div>

@@ -1,10 +1,11 @@
-<%= render partial: @user %>
-<div class="user-bio">
-  <h5>Bio:</h5>
-  <p><%= @user.bio %></p>
-</div>
-<h3>Post:</h3>
-<p> <%= render @posts %> </p>
+<div class="container">
+  <%= render partial: @user %>
+  <div class="user-bio">
+    <h5>Bio:</h5>
+    <p><%= @user.bio %></p>
+  </div>
 
-<button class="btn btn-link"><%= link_to ("See all posts"),user_posts_path(@user.id) %></button>
-<button class="btn btn-link"> <%= link_to 'All Users', root_path %> </button>
+  <%= render @posts %>
+
+  <button class="all-post-btn"><%= link_to ("See all posts"),user_posts_path(@user.id) %></button>
+</div>
