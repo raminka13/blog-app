@@ -1,4 +1,3 @@
-<h1>Users#index</h1>
-<h1>This is root/home</h1>
-<h1>This is a list of all users</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<ul class="users-list">
+<%= render partial: 'user', collection: @users %>
+</ul>

@@ -1,4 +1,10 @@
-<h1>Users#show</h1>
-<h1>Here are the details of a given post for a given user</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<%= render partial: @user %>
+<div class="user-bio">
+  <h5>Bio:</h5>
+  <p><%= @user.bio %></p>
+</div>
+<h3>Post:</h3>
+<p> <%= render @posts %> </p>
 
+<button class="btn btn-link"><%= link_to ("See all posts"),user_posts_path(@user.id) %></button>
+<button class="btn btn-link"> <%= link_to 'All Users', root_path %> </button>

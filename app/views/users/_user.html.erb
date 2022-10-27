@@ -1,0 +1,19 @@
+
+<li class="card w-75">
+  <%= link_to user_path(user) do %>
+    <% if user.photo.nil? %>
+      <%= image_tag "img_placeholder.jpg" %>
+    <% else %>
+      <img class="img-fluid card-img-left" src=<%= user.photo %>>
+    <% end %>
+  <div class="card-body">
+    <h2 class="card-title"><%= user.name %></h2>
+  </div>
+  <% end %>
+  <% if user.posts_counter == 0 %>
+    <span>No Posts Yet</span>
+  <% else %>
+    <span>Posts:<%= user.posts_counter %></span>
+  <% end %>
+</li>
+
