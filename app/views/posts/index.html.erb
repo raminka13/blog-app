@@ -1,3 +1,8 @@
-<h1>Posts#index</h1>
-<h1>Here is a list of posts for a given user</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<%= render @user %>
+<p> <%= render @posts %> </p>
+
+<button class="btn btn-link">
+  <%= link_to user_path(@user) do %>
+  Back to <%= @user.name %> profile
+  <% end %>
+</button>
