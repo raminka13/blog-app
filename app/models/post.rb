@@ -12,11 +12,16 @@ class Post < ApplicationRecord
     comments.order(created_at: :desc).limit(5)
   end
 
-  after_save :update_post_counter
+  after_save :increase_post_counter
+  after_destroy :decrease_post_counter
 
   private
 
-  def update_post_counter
+  def increase_post_counter
     author.increment!(:posts_counter)
+  end
+
+  def decrease_post_counter
+    author.decrement!(:posts_counter)
   end
 end
