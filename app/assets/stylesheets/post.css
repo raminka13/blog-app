@@ -1,0 +1,19 @@
+.post-comments {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--fifth-color);
+  margin-bottom: 0.75rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  text-align: center;
+}
+
+.post-comments p {
+  color: var(--main-color);
+  font-weight: 300;
+  margin: 0.3rem 0;
+}
+
+.post-comments strong {
+  color: var(--third-color);
+  font-weight: 600;
+}
