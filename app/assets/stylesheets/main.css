@@ -9,11 +9,11 @@
 }
 
 :root {
-  --main-color: #d9d6d2;
+  --main-color: #ebe3d9;
   --second-color: #bf8e63;
-  --third-color: #8c593b;
+  --third-color: #986445;
   --fourth-color: #593a28;
-  --fifth-color: #bf8a6b;
+  --fifth-color: #e4a37d;
 }
 
 body {
@@ -23,8 +23,9 @@ body {
 main {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
+  min-height: 80vh;
 }
 
 .container {
@@ -42,8 +43,4 @@ main {
   align-items: center;
   width: 100%;
   flex-wrap: wrap;
-}
-
-.users-list li:nth-child(odd) {
-  background: linear-gradient(90deg, var(--fifth-color), var(--second-color));
 }

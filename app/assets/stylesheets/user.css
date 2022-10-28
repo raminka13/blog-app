@@ -1,6 +1,6 @@
 .user-bio {
   width: 100%;
-  min-height: 80px;
+  min-height: 90px;
   text-align: center;
   margin-top: 0.75rem;
   margin-bottom: 1rem;
@@ -9,29 +9,39 @@
   justify-content: flex-start;
   align-items: flex-start;
   background-color: var(--third-color);
+  border: 6px solid var(--second-color);
   border-radius: 1rem 0 1rem 0;
+  padding: 1rem;
 }
 
 .user-bio h5 {
-  color: var(--main-color);
-  font-size: 20px;
-  font-weight: 100;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
   width: 100%;
   text-align: left;
-  padding: 0.75rem 0 0 0.75rem;
 }
 
 .user-bio p {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 200;
   width: 100%;
-  color: var(--main-color);
-  padding-bottom: 0.75rem;
 }
 
 .all-post-btn {
-  background-color: var(--second-color);
-  padding: 0.25rem;
-  width: 40%;
+  text-align: center;
+  border: 1px solid var(--third-color);
+  background-color: var(--fifth-color);
+  padding: 0.4rem 0.75rem;
+  width: 36%;
   border-radius: 0.25rem;
-  border: none;
   margin: 1rem 0;
+  transition: all 100ms ease-out;
+}
+
+.all-post-btn:hover {
+  background-color: var(--third-color);
+  color: var(--main-color);
+  border: 1px solid var(--fourth-color);
 }
