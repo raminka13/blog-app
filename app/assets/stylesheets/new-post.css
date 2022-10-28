@@ -1,0 +1,80 @@
+.new-post-title {
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 36px;
+  font-weight: 300;
+}
+
+form.post-form input[type=submit],
+form.comment-form input[type=submit],
+form.new-like input[type=submit] {
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid var(--third-color);
+  background-color: var(--fifth-color);
+  padding: 0.4rem 0.75rem;
+  width: 36%;
+  border-radius: 0.25rem;
+  margin: 0.5rem 0;
+  transition: all 100ms ease-out;
+}
+
+form.new-like input[type=submit] {
+  width: 80%;
+}
+
+.new-comment {
+  width: 40%;
+  margin: 1rem;
+  padding: 0.5rem;
+  border: 1px solid var(--third-color);
+  border-radius: 0.5rem;
+  background-color: var(--second-color);
+
+}
+
+form.post-form,
+form.comment-form,
+form.new-like  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+form.post-form input[type=text],
+form.comment-form input[type=text],
+form.post-form textarea {
+  width: 80%;
+  background-color: var(--main-color);
+  border: 1px solid var(--third-color);
+  border-radius: 0.25rem;
+  height: 30px;
+  padding-left: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+form.post-form textarea {
+  text-align: justify;
+  height: 100px;
+  padding: 5px;
+}
+
+form.post-form div,
+form.comment-form div,
+form.new-like div {
+  margin: 0.75rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+form.post-form div label {
+  font-size: 24px;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+}

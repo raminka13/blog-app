@@ -6,6 +6,8 @@
   border: 1px solid var(--fourth-color);
   padding: 1rem;
   margin-bottom: 0.1rem;
+  background-color: var(--main-color);
+  width: 100%;
 }
 
 .post-title {
@@ -26,13 +28,12 @@
 .social-post {
   width: 100%;
   text-align: right;
-  margin: 0.5rem;
+  margin-top: 1rem;
 }
 
 .social-post span {
   background-color: var(--second-color);
-  padding: 0.25rem;
-  width: 40%;
+  padding: 0.5rem;
   border: none;
   border-radius: 0.25rem;
 }
