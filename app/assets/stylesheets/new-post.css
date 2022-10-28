@@ -31,12 +31,11 @@ form.new-like input[type=submit] {
   border: 1px solid var(--third-color);
   border-radius: 0.5rem;
   background-color: var(--second-color);
-
 }
 
 form.post-form,
 form.comment-form,
-form.new-like  {
+form.new-like {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
