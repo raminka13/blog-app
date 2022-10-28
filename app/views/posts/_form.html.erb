@@ -1,0 +1,14 @@
+  <div class="new-comment">
+    <%= form_with model: @like, url: user_post_likes_path(@user, @post), class: "new-like" do |form| %>
+      <div>
+        <%= form.submit "Like Post" %><br>
+      </div>
+    <% end %>
+    <%= form_with model: Comment, url: user_post_comments_path(@user, @post), class: "comment-form" do |f| %>
+      <div>
+        <%= f.text_field :text, placeholder: "New Comment" %>
+      </div>
+
+        <%= f.submit 'Add Comment' %>
+    <% end %>
+  </div>

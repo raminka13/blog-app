@@ -1,18 +1,21 @@
 <div class="container">
   <%= render @user %>
-
+  <%=link_to "Add new post", new_user_post_path, class: 'all-post-btn' %>
   <%@posts.each do |post|%>
     <%= render post %>
     <div class='post-comments'>
-      <%post.recent_comments.each do |comment|%>
-        <p><strong><%=comment.author.name%>: </strong><%=comment.text%></p>
+      <% if post.recent_comments.count == 0 %>
+        <p><strong>No comments yet</strong></p>
+      <% else %>
+        <% post.recent_comments.each do |comment| %>
+         <p><strong><%=comment.author.name%>: </strong><%=comment.text%></p>
+        <%end%>
       <%end%>
     </div>
   <%end%>
 
-  <button class="all-post-btn">
-    <%= link_to user_path(@user) do %>
+
+  <%= link_to user_path(@user), class: 'all-post-btn' do %>
     Back to <strong><%= @user.name %></strong> profile
-    <% end %>
-  </button>
+  <% end %>
 </div>

@@ -1,11 +1,19 @@
 <div class="container">
-<%= render @post %>
-  
+
+  <%= render @user %>
+  <%= render @post %>
+
   <div class= "post-comments">
+    <% if @comments.count == 0 %>
+      <p><strong>No comments yet</strong></p>
+    <% else %>
       <%@comments.each do |comment|%>
           <p><strong><%= comment.author.name %>: </strong><%=comment.text%></p>
       <%end%>
+    <% end %>
   </div>
 
-  <button class="all-post-btn"><%= link_to "Back to posts", user_posts_path %></button>
+  <%= render "form" %>
+
+  <%= link_to "Back to posts", user_posts_path, class: 'all-post-btn' %>
 </div>
