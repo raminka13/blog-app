@@ -15,11 +15,12 @@ RSpec.feature 'Users', type: :feature do
     end
 
     it 'Is showing all users names' do
-      expect(page).to have_content usr1.name && usr2.name
+      usr1 = User.first
+      expect(page).to have_content usr1.name
     end
 
     it 'Is showing all users images' do
-      expect(page).to find("img[src='https://www.example.com/image']")
+      page.find("img[src='https://www.example.com/image']")
     end
   end
 end
