@@ -4,7 +4,7 @@
   <%@posts.each do |post|%>
     <%= render post %>
     <div class='post-comments'>
-      <% if post.recent_comments.count == 0 %>
+      <% if post.comments_counter == 0 %>
         <p><strong>No comments yet</strong></p>
       <% else %>
         <% post.recent_comments.each do |comment| %>
