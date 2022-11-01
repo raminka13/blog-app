@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature 'UserShows', type: :feature do
-  describe 'Show' do
+RSpec.feature 'PostsIndex', type: :feature do
+  describe 'Posts Index' do
     before(:example) do
       @usr1 = User.create(id: 1, name: 'Jack',
                           photo: 'https://www.example.com/image', bio: 'Teacher from Colombia', posts_counter: 0)
