@@ -33,6 +33,17 @@
 }
 
 #navbar-body {
+  width: 60%;
   font-size: 20px;
   font-weight: 200;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-list {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
