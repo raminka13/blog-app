@@ -10,6 +10,8 @@ class PostsController < ApplicationController
     @comments = Comment.where(post_id: @post.id).includes(:author).order(created_at: :desc)
   end
 
+  before_action :authenticate_user!
+
   def new
     @post = Post.new
   end
