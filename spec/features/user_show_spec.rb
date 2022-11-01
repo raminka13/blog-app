@@ -30,5 +30,13 @@ RSpec.feature 'UserShows', type: :feature do
     it 'I can some of the posts ' do
       expect(page).to have_content 'Lorem ipsum dolor sit amet,'
     end
+
+    it 'Is showing users images' do
+      page.find("img[src='https://www/image']")
+    end
+
+    it 'Is showing all users names' do
+      expect(page).to have_content @usr1.name
+    end
   end
 end
