@@ -1,19 +1,19 @@
 class Comment < ApplicationRecord
-  belongs_to :post
+  belongs_to :post, counter_cache: :comments_counter
   belongs_to :author, class_name: 'User'
 
   validates :text, presence: true, length: { maximum: 300 }
 
-  after_save :increase_comments_counter
-  after_destroy :decrease_comments_counter
+  # after_save :increase_comments_counter
+  # after_destroy :decrease_comments_counter
 
-  private
+  # private
 
-  def increase_comments_counter
-    post.increment!(:comments_counter)
-  end
+  # def increase_comments_counter
+  #   post.increment!(:comments_counter)
+  # end
 
-  def decrease_comments_counter
-    post.decrement!(:comments_counter)
-  end
+  # def decrease_comments_counter
+  #   post.decrement!(:comments_counter)
+  # end
 end
