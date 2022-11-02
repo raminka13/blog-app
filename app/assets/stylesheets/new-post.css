@@ -107,7 +107,7 @@ form.edit_user div label,
 }
 
 .cancel-acc {
-  display: block;
+  display: none;
 }
 
 .shared-links a {

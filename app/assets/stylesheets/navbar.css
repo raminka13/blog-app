@@ -33,7 +33,7 @@
 }
 
 #navbar-body {
-  width: 70%;
+  width: 80%;
   font-size: 18px;
   font-weight: 300;
   display: flex;
@@ -42,8 +42,8 @@
 }
 
 .navbar-list {
-  min-width: 60%;
-  max-width: 90%;
+  min-width: 80%;
+  max-width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;

@@ -1,6 +1,5 @@
 <div class="container">
   <%= render @user %>
-  <%=link_to "Add new post", new_user_post_path, class: 'all-post-btn' %>
   <%@posts.each do |post|%>
     <%= render post %>
     <div class='post-comments'>

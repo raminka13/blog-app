@@ -4,7 +4,6 @@
     <h5>Bio:</h5>
     <p><%= @user.bio %></p>
   </div>
-  <%=link_to "Add new post", new_user_post_path(@user), class: 'all-post-btn' %>
   <%= render @posts %>
 
   <%= link_to ("See all posts"),user_posts_path(@user.id), class: 'all-post-btn' %>

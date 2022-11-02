@@ -1,6 +1,4 @@
 class LikesController < ApplicationController
-  before_action :authenticate_user!
-
   def create
     @user = Post.find(params[:user_id])
     @post = Post.find(params[:post_id])
@@ -10,7 +8,7 @@ class LikesController < ApplicationController
     pp params
 
     if @like.save
-      redirect_to user_post_path(@user, @post)
+      redirect_to user_post_path(params[:user_id], params[:post_id])
     else
       render :new
     end
