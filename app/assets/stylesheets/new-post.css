@@ -1,4 +1,5 @@
-.new-post-title {
+.new-post-title,
+.container-title {
   width: 100%;
   text-align: center;
   margin: 2rem 0;
@@ -8,13 +9,15 @@
 
 form.post-form input[type=submit],
 form.comment-form input[type=submit],
-form.new-like input[type=submit] {
+form.new-like input[type=submit],
+form.edit_user input[type=submit],
+form.new_user input[type=submit] {
   cursor: pointer;
+  font-size: 18px;
   text-align: center;
   border: 1px solid var(--third-color);
   background-color: var(--fifth-color);
   padding: 0.4rem 0.75rem;
-  width: 36%;
   border-radius: 0.25rem;
   margin: 0.5rem 0;
   transition: all 100ms ease-out;
@@ -35,7 +38,10 @@ form.new-like input[type=submit] {
 
 form.post-form,
 form.comment-form,
-form.new-like {
+form.new-like,
+form.edit_user,
+form.new_user {
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -43,6 +49,14 @@ form.new-like {
 
 form.post-form input[type=text],
 form.comment-form input[type=text],
+form.new_user input[type=text],
+form.new_user input[type=email],
+form.new_user input[type=password],
+form.edit_user input[type=text],
+form.edit_user input[type=email],
+form.edit_user input[type=password],
+form.new_user textarea,
+form.edit_user textarea,
 form.post-form textarea {
   width: 80%;
   background-color: var(--main-color);
@@ -55,6 +69,8 @@ form.post-form textarea {
   font-weight: 200;
 }
 
+form.edit_user textarea,
+form.new_user textarea,
 form.post-form textarea {
   text-align: justify;
   height: 100px;
@@ -63,7 +79,9 @@ form.post-form textarea {
 
 form.post-form div,
 form.comment-form div,
-form.new-like div {
+form.new-like div,
+form.edit_user div,
+form.new_user div {
   margin: 0.75rem;
   width: 100%;
   display: flex;
@@ -71,9 +89,34 @@ form.new-like div {
   flex-wrap: wrap;
 }
 
-form.post-form div label {
+form.post-form div label,
+form.new_user div label,
+form.edit_user div label,
+.min-pass {
   font-size: 24px;
   font-weight: 500;
   width: 100%;
   text-align: center;
+}
+
+.shared-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cancel-acc {
+  display: block;
+}
+
+.shared-links a {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+  transition: color 200ms ease-in-out;
+}
+
+.shared-links a:hover {
+  color: var(--main-color);
 }

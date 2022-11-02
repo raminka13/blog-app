@@ -33,6 +33,36 @@
 }
 
 #navbar-body {
-  font-size: 20px;
+  width: 70%;
+  font-size: 18px;
+  font-weight: 300;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-list {
+  min-width: 60%;
+  max-width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logged-user {
+  color: var(--main-color);
+  background-color: var(--third-color);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--fourth-color);
+  border-radius: 0.25rem;
+  font-size: 14px;
+  line-height: 14px;
   font-weight: 200;
+  text-align: center;
+}
+
+.logged-user strong {
+  color: var(--main-color);
+  font-size: 18px;
+  font-weight: 500;
 }
