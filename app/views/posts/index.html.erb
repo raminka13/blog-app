@@ -8,7 +8,7 @@
         <p><strong>No comments yet</strong></p>
       <% else %>
         <% post.recent_comments.each do |comment| %>
-         <p><strong><%=comment.author.name%>: </strong><%=comment.text%></p>
+         <p><strong><%= comment.author.name %>: </strong><%=comment.text%></p>
         <%end%>
       <%end%>
     </div>

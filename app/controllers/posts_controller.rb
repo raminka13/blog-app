@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def show
     @user = User.includes(:posts).find(params[:user_id])
     @post = Post.includes(:comments).find(params[:id])
-    @comments = Comment.where(post_id: @post.id).includes(:author).order(created_at: :desc)
+    @comments = Comment.where(post_id: @post.id).includes(:author).order(created_at: :asc)
   end
 
   before_action :authenticate_user!

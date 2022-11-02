@@ -26,6 +26,8 @@ main {
   align-items: flex-start;
   width: 100%;
   min-height: 80vh;
+  max-height: fit-content;
+  flex-wrap: wrap;
 }
 
 .container {
@@ -35,6 +37,12 @@ main {
   width: 80%;
   max-width: 900px;
   flex-wrap: wrap;
+}
+
+.notice,
+.alert {
+  width: 100%;
+  text-align: center;
 }
 
 .users-list {
