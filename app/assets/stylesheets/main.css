@@ -25,15 +25,14 @@ main {
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  min-height: 80vh;
-  max-height: fit-content;
   flex-wrap: wrap;
 }
 
 .container {
   display: flex;
+  min-height: 80vh;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 80%;
   max-width: 900px;
   flex-wrap: wrap;
