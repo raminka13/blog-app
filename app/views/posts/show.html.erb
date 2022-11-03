@@ -10,8 +10,10 @@
       <% @comments.includes(:author).each do |comm|%>
         <div class='comment'>
           <p><strong><%= comm.author.name %>: </strong><%= comm.text %></p>
-          <%= form_with model: Comment, class: 'destroy-form', url: user_post_comment_path(comm.author_id, comm.post_id, comm.id), method: :delete do |form| %>
-            <%= form.submit "❌", class: 'comment-destroy' %><br>
+          <% if can? :destroy, comm %>
+            <%= form_with model: Comment, class: 'destroy-form', url: user_post_comment_path(comm.author_id, comm.post_id, comm.id), method: :delete do |form| %>
+              <%= form.submit "❌", class: 'comment-destroy' %><br>
+            <% end %>
           <% end %>
         </div>
       <%end%>
