@@ -26,7 +26,7 @@
 }
 
 .social-post {
-  width: 100%;
+  width: 70%;
   text-align: right;
   margin-top: 1rem;
 }
@@ -36,4 +36,42 @@
   padding: 0.5rem;
   border: none;
   border-radius: 0.25rem;
+}
+
+.post-comments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.destroy-form {
+  width: auto;
+  text-align: center;
+}
+
+.comment {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-destroy {
+  cursor: pointer;
+  font-size: 15px;
+  text-align: center;
+  border: 1px solid var(--third-color);
+  background-color: var(--fifth-color);
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+}
+
+.comment-destroy {
+  cursor: pointer;
+  font-size: 10px;
+  border: none;
+  background-color: var(--fifth-color);
+  padding: 0.25rem;
+  margin-left: 0.5rem;
 }

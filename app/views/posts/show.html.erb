@@ -7,8 +7,15 @@
     <% if @post.comments_counter == 0 %>
       <p><strong>No comments yet</strong></p>
     <% else %>
-      <%@comments.includes(:author).each do |comment|%>
-          <p><strong><%= comment.author.name %>: </strong><%= comment.text %></p>
+      <% @comments.includes(:author).each do |comm|%>
+        <div class='comment'>
+          <p><strong><%= comm.author.name %>: </strong><%= comm.text %></p>
+          <% if can? :destroy, comm %>
+            <%= form_with model: Comment, class: 'destroy-form', url: user_post_comment_path(comm.author_id, comm.post_id, comm.id), method: :delete do |form| %>
+              <%= form.submit "❌", class: 'comment-destroy' %><br>
+            <% end %>
+          <% end %>
+        </div>
       <%end%>
     <% end %>
   </div>

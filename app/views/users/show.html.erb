@@ -5,6 +5,5 @@
     <p><%= @user.bio %></p>
   </div>
   <%= render @posts %>
-
   <%= link_to ("See all posts"),user_posts_path(@user.id), class: 'all-post-btn' %>
 </div>

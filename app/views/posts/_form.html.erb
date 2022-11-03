@@ -1,5 +1,5 @@
   <div class="new-comment">
-    <%= form_with model: @like, url: user_post_likes_path(@user, @post), method: :post, data: { turbo_method: :post }, class: "new-like" do |form| %>
+    <%= form_with model: @like, url: user_post_likes_path(@user, @post), class: "new-like" do |form| %>
       <div>
         <%= form.submit "Like Post" %><br>
       </div>
