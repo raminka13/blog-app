@@ -47,6 +47,11 @@
       <%= f.password_field :current_password, autocomplete: "current-password" %>
     </div>
 
+    <div class="field">
+      <%= f.label :role %><br />
+      <%= f.radio_button :role, 'admin' %>Admin?<br />
+    </div>
+
     <div class="actions">
       <%= f.submit "Update" %>
     </div>
