@@ -27,6 +27,8 @@
 }
 
 .user-card-img img {
+  height: 130px;
+  width: auto;
   border-radius: 0.25rem;
 }
 
