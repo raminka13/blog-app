@@ -6,8 +6,8 @@
       <% if post.comments_counter == 0 %>
         <p><strong>No comments yet</strong></p>
       <% else %>
-        <% post.recent_comments.each do |comment| %>
-         <p><strong><%= comment.author.name %>: </strong><%=comment.text%></p>
+        <% post.recent_comments.each do |comm| %>
+         <p><strong><%= comm.author.name %>: </strong><%=comm.text%></p>
         <%end%>
       <%end%>
     </div>

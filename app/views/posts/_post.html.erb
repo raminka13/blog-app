@@ -3,6 +3,11 @@
     <h4><%=post.title%></h4>
   <%end%>
   <p class="post-text"><%= post.text.split("\n").first %></p>
+    <%= form_with model: post, class: 'destroy-form', url: user_post_path(post.author_id, post.id), method: :delete do |form| %>
+      <div>
+        <%= form.submit "Delete Post", class: 'post-destroy' %><br>
+      </div>
+    <% end %>
   <div class="social-post">
     <span>📝 Comments: <%= post.comments_counter %></span>
     <span>❤️ Likes: <%=post.likes_counter%></span>
