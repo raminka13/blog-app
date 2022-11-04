@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
     @user = User.find(params[:user_id])
     @comment = Comment.find(params[:id])
     @comment.destroy
-    redirect_to user_posts_path(@user), notice: 'Comment Deleted!'
+    redirect_to user_post_path(@user, params[:post_id]), notice: 'Comment Deleted!'
   end
 
   private

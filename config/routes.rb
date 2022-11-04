@@ -8,6 +8,15 @@ Rails.application.routes.draw do
       resources :likes, only: [:new, :create]
     end
   end
-  # Defines the root path route ("/")
-  # root "articles#index"
+
+  namespace :api do
+    namespace :v1 do
+      resources :users, only: [:index, :show] do
+        resources :posts, only: [:index, :show, :create], format: :json do
+          resources :comments, only: [:create], format: :json
+          resources :likes, only: [:create], format: :json
+        end
+      end
+    end
+  end
 end

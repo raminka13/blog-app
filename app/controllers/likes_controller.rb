@@ -7,7 +7,7 @@ class LikesController < ApplicationController
     if @like.save
       redirect_to user_post_path(params[:user_id], params[:post_id])
     else
-      render :new
+      redirect_to user_post_path(params[:user_id], params[:post_id]), notice: 'Already liked'
     end
   end
 end
