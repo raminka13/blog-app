@@ -12,7 +12,7 @@
   --main-color: #ebe3d9;
   --second-color: #bf8e63;
   --third-color: #986445;
-  --fourth-color: #593a28;
+  --fourth-color: #1f0e04;
   --fifth-color: #e4a37d;
 }
 
@@ -41,7 +41,15 @@ main {
 .notice,
 .alert {
   width: 100%;
+  min-height: 0;
+  max-height: 20%;
+  background-color: #1b7b1b;
+  color: white;
   text-align: center;
+}
+
+.alert {
+  background-color: #b00707;
 }
 
 .users-list {

@@ -2,7 +2,7 @@
 <li class="user-card">
   <%= link_to user_path(user) do %>
     <div class="user-card-img">
-      <% if user.photo.nil? %>
+      <% if user.photo.empty? %>
         <%= image_tag "img_placeholder.jpg" %>
       <% else %>
         <img src=<%= user.photo %>>
@@ -10,6 +10,7 @@
     </div>
     <div class="card-body">
       <h2 class="card-title"><%= user.name %></h2>
+      <p><%= user.bio.truncate(120) %><strong>see more...</strong></p>
     </div>
   <% end %>
 

@@ -1,6 +1,6 @@
 <nav id="navbar">
   <div id="nav-container">
-    <a class="navbar-brand" href="/"><img src=<%= asset_path('favicon.png') %> alt="BlogApp">
+    <a class="navbar-brand" href="/"><img src=<%= asset_path('blogging.png') %> alt="BlogApp">
     <h2>BlogApp</h2>
     </a>
     <div id="navbar-body">
@@ -16,10 +16,9 @@
           <%= link_to("Log out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete }) %>
         </li>
         <li class="nav-item">
-          <%= link_to "Edit Profile", edit_user_registration_path, class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
+          <%= link_to edit_user_registration_path, class: 'nav-link' do %>
           <p class="logged-user">Log as <%= current_user.role %><br><strong><%= current_user.name %></strong></p>
+          <% end %>
         </li>
       <% else %>
         <li class="nav-item">

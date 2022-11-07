@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-  load_and_authorize_resource
   def create
     @comment = Comment.new(comment_params)
     @comment.author_id = current_user.id
@@ -16,7 +15,7 @@ class CommentsController < ApplicationController
     @user = User.find(params[:user_id])
     @comment = Comment.find(params[:id])
     @comment.destroy
-    redirect_to user_post_path(@user, params[:post_id]), notice: 'Comment Deleted!'
+    redirect_to user_post_path(@user, params[:post_id]), alert: 'Comment Deleted!'
   end
 
   private

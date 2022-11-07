@@ -9,7 +9,6 @@
 
 form.post-form input[type=submit],
 form.comment-form input[type=submit],
-form.new-like input[type=submit],
 form.edit_user input[type=submit],
 form.new_user input[type=submit] {
   cursor: pointer;
@@ -23,22 +22,20 @@ form.new_user input[type=submit] {
   transition: all 100ms ease-out;
 }
 
-form.new-like input[type=submit] {
-  width: 80%;
-}
-
 .new-comment {
-  width: 40%;
+  width: 80%;
   margin: 1rem;
   padding: 0.5rem;
   border: 1px solid var(--third-color);
   border-radius: 0.5rem;
   background-color: var(--second-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 form.post-form,
 form.comment-form,
-form.new-like,
 form.edit_user,
 form.new_user {
   width: 90%;
@@ -79,7 +76,6 @@ form.post-form textarea {
 
 form.post-form div,
 form.comment-form div,
-form.new-like div,
 form.edit_user div,
 form.new_user div {
   margin: 0.75rem;
@@ -107,7 +103,17 @@ form.edit_user div label,
 }
 
 .cancel-acc {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.cancel-acc p {
+  width: 90%;
+  text-align: center;
+  margin-top: 0.5rem;
 }
 
 .shared-links a {
@@ -119,4 +125,34 @@ form.edit_user div label,
 
 .shared-links a:hover {
   color: var(--main-color);
+}
+
+.back-btn,
+.destroy-acc-btn {
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid var(--third-color);
+  background-color: var(--fourth-color);
+  color: var(--main-color);
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.25rem;
+  margin-left: 40%;
+  margin-right: 40%;
+  transition: all 100ms ease-out;
+}
+
+form.button_to {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.destroy-acc-btn {
+  margin-top: 1rem;
+  background-color: red;
+  color: white;
+  width: 100%;
+  padding: 0.25rem 2rem;
 }

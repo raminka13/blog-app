@@ -1,7 +1,7 @@
 <div class="container">
-  <h2 class="new-post-title">Create a New Post</h2>
+  <h2 class="new-post-title">Edit Post</h2>
 
-  <%= form_with model: @post, url: user_posts_path, class: 'post-form' do |f| %>
+  <%= form_with model: @post, url: user_post_path, class: 'post-form' do |f| %>
     <div>
       <%= f.label :title %>
       <%= f.text_field :title %>

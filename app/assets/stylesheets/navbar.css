@@ -22,8 +22,12 @@
 .navbar-brand {
   display: inline-flex;
   align-items: center;
-  font-size: 25px;
+}
+
+.navbar-brand h2 {
+  font-size: 36px;
   font-weight: 400;
+  color: black;
 }
 
 .navbar-brand img {

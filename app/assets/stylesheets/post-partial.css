@@ -11,22 +11,32 @@
 }
 
 .post-title {
-  width: 100%;
+  width: 96%;
   height: 1.6rem;
-  font-size: 24px;
-  font-weight: 600;
   margin: 0.3rem;
 }
 
-.post-text {
+.post-title h4 {
   font-size: 14px;
+  font-weight: 300;
+}
+
+.post-title h4 strong {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.post-text {
+  width: 93%;
+  font-size: 16px;
   font-weight: 300;
   text-align: justify;
   margin-top: 0.3rem;
+  line-height: 17px;
 }
 
 .social-post {
-  width: 70%;
+  width: 36%;
   text-align: right;
   margin-top: 1rem;
 }
@@ -44,8 +54,19 @@
   justify-content: center;
 }
 
-.destroy-form {
+.destroy-edit {
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+form.destroy-form {
   width: auto;
+  text-align: center;
+}
+
+form.new-like {
+  width: 30%;
   text-align: center;
 }
 
@@ -56,7 +77,9 @@
   align-items: center;
 }
 
-.post-destroy {
+.new-like-btn,
+.post-destroy,
+.post-edit {
   cursor: pointer;
   font-size: 15px;
   text-align: center;
@@ -64,7 +87,24 @@
   background-color: var(--fifth-color);
   padding: 0.4rem 0.75rem;
   border-radius: 0.25rem;
+  margin-right: 0.25rem;
   margin-top: 1rem;
+  transition: all 250ms ease-in;
+}
+
+.new-like-btn {
+  background-color: #eea9a9;
+  color: var(--fourth-color);
+}
+
+.post-destroy:hover {
+  background-color: #c24848;
+  color: #f8d3d3;
+}
+
+.post-edit:hover {
+  background-color: #71c248;
+  color: #032719;
 }
 
 .comment-destroy {
@@ -74,4 +114,9 @@
   background-color: var(--fifth-color);
   padding: 0.25rem;
   margin-left: 0.5rem;
+  transition: all 200ms ease-in-out;
+}
+
+.comment-destroy:hover {
+  transform: rotate(90deg);
 }

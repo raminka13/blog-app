@@ -1,15 +1,31 @@
 <div class="post-card">
   <%= link_to user_post_path(post.author_id, post.id), class: 'post-title' do %>
-    <h4><%=post.title%></h4>
+    <h4><strong><%= post.title %></strong> by: <%= post.author.name %></h4>
   <%end%>
-  <p class="post-text"><%= post.text.split("\n").first %></p>
-  <% if can? :destroy, post %>
-    <%= form_with model: post, class: 'destroy-form', url: user_post_path(post.author_id, post.id), method: :delete do |form| %>
+  <p class="post-text">
+    <% if post.id.to_s == params[:id] %>
+      <%= post.text %>
+    <% else %>
+      <%= post.text.truncate(150) %> <strong><%= link_to 'see more', user_post_path(post.author_id, post.id) %></strong>
+    <% end %>
+  </p>
+  <div class="destroy-edit">
+    <% if can? :destroy, post %>
+      <%= form_with model: post, class: 'destroy-form', url: user_post_path(post.author_id, post.id), method: :delete do |form| %>
+        <div>
+          <%= form.submit "Delete Post", class: 'post-destroy' %><br>
+        </div>
+      <% end %>
+    <% end %>
+    <% if can? :update, post %>
+      <%= link_to "Edit Post", edit_user_post_path(post.author_id, post.id), class: 'post-edit'  %>
+    <% end %>
+    <%= form_with model: @like, url: user_post_likes_path(post.author_id, post.id), class: "new-like" do |form| %>
       <div>
-        <%= form.submit "Delete Post", class: 'post-destroy' %><br>
+        <%= form.submit "Like Post", class: 'new-like-btn' %><br>
       </div>
     <% end %>
-  <% end %>
+  </div>
   <div class="social-post">
     <span>📝 Comments: <%= post.comments_counter %></span>
     <span>❤️ Likes: <%=post.likes_counter%></span>

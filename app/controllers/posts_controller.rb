@@ -12,6 +12,16 @@ class PostsController < ApplicationController
     @comments = Comment.where(post_id: @post.id).includes(:author).order(created_at: :asc)
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    @post.update(title: params[:post][:title], text: params[:post][:text])
+    redirect_to user_post_path(params[:user_id], @post)
+  end
+
   def destroy
     @post = Post.find(params[:id]).destroy
 
