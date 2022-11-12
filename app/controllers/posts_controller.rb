@@ -1,6 +1,4 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
-  load_and_authorize_resource
   def index
     @user = User.includes(:posts).find(params[:user_id])
     @posts = Post.where(author_id: @user.id).includes(:comments).order(created_at: :desc)
@@ -31,7 +29,8 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @user = User.find(params[:user_id])
+    @post = @user.posts.build
   end
 
   def create

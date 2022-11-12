@@ -1,17 +1,19 @@
 <div class="container">
   <h2 class="new-post-title">Create a New Post</h2>
-
-  <%= form_with model: @post, url: user_posts_path, class: 'post-form' do |f| %>
-    <div>
-      <%= f.label :title %>
-      <%= f.text_field :title %>
-    </div>
-
-    <div>
-      <%= f.label :text %>
-      <%= f.text_area :text %>
-    </div>
-      <%= f.submit %>
-    <%= link_to "Back", :back, class: 'back-btn' %>
+  <% if can? :manage, @user.posts.first %>
+    <%= form_with model: @post, url: user_posts_path, class: 'post-form' do |f| %>
+      <div>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+      <div>
+        <%= f.label :text %>
+        <%= f.text_area :text %>
+      </div>
+        <%= f.submit %>
+    <% end %>
+  <% else %>
+    What are you doing here? Go back!!
   <% end %>
+  <%= link_to "Back", :back, class: 'back-btn' %>
 </div>
